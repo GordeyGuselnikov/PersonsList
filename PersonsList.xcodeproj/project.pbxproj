@@ -9,21 +9,31 @@
 /* Begin PBXBuildFile section */
 		72B5BAB22490C8E2009533DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B5BAB12490C8E2009533DD /* AppDelegate.swift */; };
 		72B5BAB42490C8E2009533DD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B5BAB32490C8E2009533DD /* SceneDelegate.swift */; };
-		72B5BAB62490C8E2009533DD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B5BAB52490C8E2009533DD /* ViewController.swift */; };
 		72B5BAB92490C8E2009533DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72B5BAB72490C8E2009533DD /* Main.storyboard */; };
 		72B5BABB2490C8E6009533DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72B5BABA2490C8E6009533DD /* Assets.xcassets */; };
 		72B5BABE2490C8E6009533DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72B5BABC2490C8E6009533DD /* LaunchScreen.storyboard */; };
+		72B5BAC62490CB76009533DD /* PersonListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B5BAC52490CB76009533DD /* PersonListViewController.swift */; };
+		72B5BAC82490CD96009533DD /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B5BAC72490CD96009533DD /* Person.swift */; };
+		72B5BACA2490CF21009533DD /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B5BAC92490CF21009533DD /* DataManager.swift */; };
+		72B5BACC24910325009533DD /* PersonDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B5BACB24910325009533DD /* PersonDetailsViewController.swift */; };
+		72B5BACE24910376009533DD /* SecondPersonListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B5BACD24910376009533DD /* SecondPersonListViewController.swift */; };
+		72B5BAD024920B30009533DD /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B5BACF24920B30009533DD /* TabBarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		72B5BAAE2490C8E2009533DD /* PersonsList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PersonsList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72B5BAB12490C8E2009533DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		72B5BAB32490C8E2009533DD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		72B5BAB52490C8E2009533DD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		72B5BAB82490C8E2009533DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		72B5BABA2490C8E6009533DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		72B5BABD2490C8E6009533DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		72B5BABF2490C8E6009533DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		72B5BAC52490CB76009533DD /* PersonListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonListViewController.swift; sourceTree = "<group>"; };
+		72B5BAC72490CD96009533DD /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		72B5BAC92490CF21009533DD /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		72B5BACB24910325009533DD /* PersonDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailsViewController.swift; sourceTree = "<group>"; };
+		72B5BACD24910376009533DD /* SecondPersonListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondPersonListViewController.swift; sourceTree = "<group>"; };
+		72B5BACF24920B30009533DD /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +68,26 @@
 			children = (
 				72B5BAB12490C8E2009533DD /* AppDelegate.swift */,
 				72B5BAB32490C8E2009533DD /* SceneDelegate.swift */,
-				72B5BAB52490C8E2009533DD /* ViewController.swift */,
-				72B5BAB72490C8E2009533DD /* Main.storyboard */,
+				72B5BAD124921E1E009533DD /* ViewControllers */,
+				72B5BAC92490CF21009533DD /* DataManager.swift */,
+				72B5BAC72490CD96009533DD /* Person.swift */,
 				72B5BABA2490C8E6009533DD /* Assets.xcassets */,
 				72B5BABC2490C8E6009533DD /* LaunchScreen.storyboard */,
+				72B5BAB72490C8E2009533DD /* Main.storyboard */,
 				72B5BABF2490C8E6009533DD /* Info.plist */,
 			);
 			path = PersonsList;
+			sourceTree = "<group>";
+		};
+		72B5BAD124921E1E009533DD /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				72B5BACF24920B30009533DD /* TabBarViewController.swift */,
+				72B5BAC52490CB76009533DD /* PersonListViewController.swift */,
+				72B5BACD24910376009533DD /* SecondPersonListViewController.swift */,
+				72B5BACB24910325009533DD /* PersonDetailsViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +161,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				72B5BAB62490C8E2009533DD /* ViewController.swift in Sources */,
+				72B5BAD024920B30009533DD /* TabBarViewController.swift in Sources */,
+				72B5BAC62490CB76009533DD /* PersonListViewController.swift in Sources */,
+				72B5BACA2490CF21009533DD /* DataManager.swift in Sources */,
+				72B5BACC24910325009533DD /* PersonDetailsViewController.swift in Sources */,
 				72B5BAB22490C8E2009533DD /* AppDelegate.swift in Sources */,
+				72B5BAC82490CD96009533DD /* Person.swift in Sources */,
+				72B5BACE24910376009533DD /* SecondPersonListViewController.swift in Sources */,
 				72B5BAB42490C8E2009533DD /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
