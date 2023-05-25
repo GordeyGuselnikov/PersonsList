@@ -2,8 +2,8 @@
 //  Person.swift
 //  PersonsList
 //
-//  Created by Гордей Гусельников on 10.06.2020.
-//  Copyright © 2020 gordeyStudio. All rights reserved.
+//  Created by Guselnikov Gordey on 5/26/23.
+//  Copyright © 2023 gordeyStudio. All rights reserved.
 //
 
 struct Person {

@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="a5d-u6-Ydq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="a5d-u6-Ydq">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -14,10 +16,10 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ses-Sc-fNB">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="personList" id="uEV-0U-db7">
-                                <rect key="frame" x="0.0" y="28" width="320" height="43.5"/>
+                                <rect key="frame" x="0.0" y="50" width="320" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uEV-0U-db7" id="92h-mt-0Zu">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
@@ -33,7 +35,7 @@
                             <outlet property="delegate" destination="lCT-qq-E17" id="wv0-7s-Pqx"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" selectedImage="person.crop.square.fill" catalog="system" systemItem="favorites" id="231-n3-ZWG"/>
+                    <tabBarItem key="tabBarItem" selectedImage="person.crop.square.fill" catalog="system" systemItem="contacts" id="231-n3-ZWG"/>
                     <navigationItem key="navigationItem" title="Persons List" id="GcR-3E-boU"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y3P-El-fHy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -49,16 +51,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="jlZ-lD-1Lm">
-                                <rect key="frame" x="29" y="73" width="42" height="49"/>
+                                <rect key="frame" x="29" y="73" width="41.5" height="49"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sfj-7n-h9h">
-                                        <rect key="frame" x="0.0" y="0.0" width="42" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="41.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CZl-iy-JTY">
-                                        <rect key="frame" x="0.0" y="28.5" width="42" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="28.5" width="41.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -66,12 +68,12 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="RVM-tR-6SJ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="jlZ-lD-1Lm" firstAttribute="top" secondItem="RVM-tR-6SJ" secondAttribute="top" constant="29" id="9pT-TT-4DX"/>
                             <constraint firstItem="jlZ-lD-1Lm" firstAttribute="leading" secondItem="RVM-tR-6SJ" secondAttribute="leading" constant="29" id="f8Q-ZV-D4y"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="RVM-tR-6SJ"/>
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="DLC-ev-thK"/>
                     <connections>
@@ -88,7 +90,7 @@
             <objects>
                 <navigationController id="a5d-u6-Ydq" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="u1C-yR-SkL">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="91"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="98.5"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -106,6 +108,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Persons List" id="hDE-UH-Azf"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Rra-dr-DFh">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -125,10 +128,10 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Ixh-6K-SJ5">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="secondPersonList" id="12i-ei-r2U">
-                                <rect key="frame" x="0.0" y="28" width="320" height="43.5"/>
+                                <rect key="frame" x="0.0" y="50" width="320" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="12i-ei-r2U" id="ok0-Qq-jPc">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
@@ -151,5 +154,8 @@
     <resources>
         <image name="person.crop.square.fill" catalog="system" width="128" height="114"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
