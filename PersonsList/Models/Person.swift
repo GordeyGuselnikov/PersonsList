@@ -21,10 +21,10 @@ struct Person {
         
         var persons: [Person] = []
         
-        let firstNames = DataManager.shared.firstNames.shuffled()
-        let lastNames = DataManager.shared.lastNames.shuffled()
-        let phoneNumbers = DataManager.shared.phoneNumbers.shuffled()
-        let eMails = DataManager.shared.eMails.shuffled()
+        let firstNames = DataStorage.shared.firstNames.shuffled()
+        let lastNames = DataStorage.shared.lastNames.shuffled()
+        let phoneNumbers = DataStorage.shared.phoneNumbers.shuffled()
+        let eMails = DataStorage.shared.eMails.shuffled()
         
         for index in 0 ..< firstNames.count {
             let person = Person(firstName: firstNames[index],

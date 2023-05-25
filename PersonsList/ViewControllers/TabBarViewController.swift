@@ -8,21 +8,26 @@
 
 import UIKit
 
-class TabBarViewController: UITabBarController {
+final class TabBarViewController: UITabBarController {
 
-    let persons = Person.getPerson()
+    private let persons = Person.getPerson()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let appearance = UITabBarAppearance()
+        tabBar.standardAppearance = appearance
+        tabBar.scrollEdgeAppearance = appearance
+        
         setupViewControllers(with: persons)
     }
 
     private func setupViewControllers(with persons: [Person]) {
-        let personListVC = viewControllers?.first as! PersonListViewController
-        let secondPersonListVC = viewControllers?.last as! SecondPersonListViewController
-        
+
+        guard let personListVC = viewControllers?.first as? PersonListViewController else { return }
         personListVC.persons = persons
+        
+        guard let secondPersonListVC = viewControllers?.last as? SecondPersonListViewController else { return }
         secondPersonListVC.persons = persons
     }
 }
