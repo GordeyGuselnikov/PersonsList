@@ -19,10 +19,10 @@ final class TabBarViewController: UITabBarController {
         tabBar.standardAppearance = appearance
         tabBar.scrollEdgeAppearance = appearance
         
-        setupViewControllers(with: persons)
+        setupViewControllers()
     }
 
-    private func setupViewControllers(with persons: [Person]) {
+    private func setupViewControllers() {
 
         guard let personListVC = viewControllers?.first as? PersonListViewController else { return }
         personListVC.persons = persons
