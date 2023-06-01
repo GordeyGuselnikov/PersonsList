@@ -18,6 +18,7 @@
 		72B5BACC24910325009533DD /* PersonDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B5BACB24910325009533DD /* PersonDetailsViewController.swift */; };
 		72B5BACE24910376009533DD /* SecondPersonListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B5BACD24910376009533DD /* SecondPersonListViewController.swift */; };
 		72B5BAD024920B30009533DD /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B5BACF24920B30009533DD /* TabBarViewController.swift */; };
+		8F47FA1C2A28F41A00A7F912 /* HeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F47FA1B2A28F41A00A7F912 /* HeaderTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		72B5BACB24910325009533DD /* PersonDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailsViewController.swift; sourceTree = "<group>"; };
 		72B5BACD24910376009533DD /* SecondPersonListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondPersonListViewController.swift; sourceTree = "<group>"; };
 		72B5BACF24920B30009533DD /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		8F47FA1B2A28F41A00A7F912 /* HeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 			children = (
 				8FC147A42A1FF638003BED20 /* App */,
 				8FC147A52A1FF64F003BED20 /* Models */,
+				8F47FA1D2A28F42C00A7F912 /* Views */,
 				72B5BAD124921E1E009533DD /* ViewControllers */,
 				8F69A37A2A20162800D096BF /* Services */,
 				8FC147A72A1FF687003BED20 /* Resources */,
@@ -85,6 +88,14 @@
 				72B5BACB24910325009533DD /* PersonDetailsViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		8F47FA1D2A28F42C00A7F912 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8F47FA1B2A28F41A00A7F912 /* HeaderTableViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		8F69A37A2A20162800D096BF /* Services */ = {
@@ -202,6 +213,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				72B5BAD024920B30009533DD /* TabBarViewController.swift in Sources */,
+				8F47FA1C2A28F41A00A7F912 /* HeaderTableViewCell.swift in Sources */,
 				72B5BAC62490CB76009533DD /* PersonListViewController.swift in Sources */,
 				72B5BACA2490CF21009533DD /* DataStorage.swift in Sources */,
 				72B5BACC24910325009533DD /* PersonDetailsViewController.swift in Sources */,

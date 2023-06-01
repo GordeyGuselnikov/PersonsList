@@ -138,8 +138,65 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="headerCell" rowHeight="59" id="7uU-1C-rdA" customClass="HeaderTableViewCell" customModule="HW3" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="50" width="320" height="59"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7uU-1C-rdA" id="nUr-wo-1Si">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="59"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="uhD-G6-yb9">
+                                            <rect key="frame" x="61" y="7.5" width="51.5" height="44.5"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fg7-cQ-UeX">
+                                                    <rect key="frame" x="0.0" y="0.0" width="42.5" height="16.5"/>
+                                                    <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="14"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gfr-lw-D8v">
+                                                    <rect key="frame" x="0.0" y="24.5" width="51.5" height="20"/>
+                                                    <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hw8-Lc-jYd">
+                                            <rect key="frame" x="287.5" y="18.5" width="20.5" height="22"/>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" image="phone" catalog="system"/>
+                                            <connections>
+                                                <action selector="phoneButtonPressed" destination="7uU-1C-rdA" eventType="touchUpInside" id="MlI-jH-how"/>
+                                            </connections>
+                                        </button>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ncE-sk-8xg">
+                                            <rect key="frame" x="12" y="9.5" width="41" height="40"/>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="41" id="6LF-6v-A9i"/>
+                                                <constraint firstAttribute="width" constant="41" id="Zfq-wT-J3T"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="uhD-G6-yb9" firstAttribute="leading" secondItem="ncE-sk-8xg" secondAttribute="trailing" constant="8" symbolic="YES" id="7kv-Mm-vth"/>
+                                        <constraint firstItem="hw8-Lc-jYd" firstAttribute="centerY" secondItem="nUr-wo-1Si" secondAttribute="centerY" id="AXn-ag-Eqf"/>
+                                        <constraint firstItem="ncE-sk-8xg" firstAttribute="centerY" secondItem="nUr-wo-1Si" secondAttribute="centerY" id="WlJ-SJ-gaS"/>
+                                        <constraint firstItem="uhD-G6-yb9" firstAttribute="centerY" secondItem="nUr-wo-1Si" secondAttribute="centerY" id="fyA-M4-dYX"/>
+                                        <constraint firstAttribute="trailing" secondItem="hw8-Lc-jYd" secondAttribute="trailing" constant="12" id="ldc-Ci-fLn"/>
+                                        <constraint firstItem="ncE-sk-8xg" firstAttribute="leading" secondItem="nUr-wo-1Si" secondAttribute="leading" constant="12" id="rOo-cP-UKg"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="nameLabel" destination="Fg7-cQ-UeX" id="oNk-f1-Yvr"/>
+                                    <outlet property="surnameLabel" destination="gfr-lw-D8v" id="Iik-Ts-uLU"/>
+                                </connections>
+                            </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="secondPerson" id="12i-ei-r2U">
-                                <rect key="frame" x="0.0" y="50" width="320" height="43.5"/>
+                                <rect key="frame" x="0.0" y="109" width="320" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="12i-ei-r2U" id="ok0-Qq-jPc">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
@@ -160,6 +217,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="person.circle" catalog="system" width="128" height="123"/>
+        <image name="phone" catalog="system" width="128" height="115"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

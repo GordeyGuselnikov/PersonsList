@@ -12,7 +12,7 @@ final class DataStorage {
     
     static let shared = DataStorage()
     
-    let firstNames = ["Ivan", "Alex", "Den", "Anya", "Mark", "David", "Steve"]
+    let firstNames = ["Alex", "Den", "Anya", "Mark", "David", "Steve"]
     
     let lastNames = ["Smith", "Fischer", "Muller", "Ivanov", "McLaren", "Jobs", "Jackson"]
     
@@ -21,5 +21,4 @@ final class DataStorage {
     let eMails = ["123@ru.ru", "asd@mail.ru", "zxc@gmail.com", "1234asxs@icloud.com", "djhfbj@mail.com", "ivan@gmail.com", "uycf@icloud.ru"]
     
     private init() {}
-    
 }

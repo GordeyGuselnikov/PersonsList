@@ -11,26 +11,42 @@ struct Person {
     let firstName: String
     let lastName: String
     let phoneNumber: String
-    let eMail: String
+    let email: String
     
     var fullName: String {
         "\(firstName) \(lastName)"
     }
     
-    static func getPerson() -> [Person] {
+    var rows: [String] {
+        [phoneNumber, email]
+    }
+}
+
+extension Person {
+    
+    static func getPersons() -> [Person] {
         
         var persons: [Person] = []
         
         let firstNames = DataStorage.shared.firstNames.shuffled()
         let lastNames = DataStorage.shared.lastNames.shuffled()
         let phoneNumbers = DataStorage.shared.phoneNumbers.shuffled()
-        let eMails = DataStorage.shared.eMails.shuffled()
+        let emails = DataStorage.shared.eMails.shuffled()
         
-        for index in 0 ..< firstNames.count {
-            let person = Person(firstName: firstNames[index],
-                                lastName: lastNames[index],
-                                phoneNumber: phoneNumbers[index],
-                                eMail: eMails[index])
+        let iterationCount = min(
+            firstNames.count,
+            lastNames.count,
+            emails.count,
+            phoneNumbers.count
+        )
+        
+        for index in 0..<iterationCount {
+            let person = Person(
+                firstName: firstNames[index],
+                lastName: lastNames[index],
+                phoneNumber: phoneNumbers[index],
+                email: emails[index]
+            )
             persons.append(person)
         }
         
@@ -41,5 +57,5 @@ struct Person {
 // Enum for Pictures
 enum Contacts: String {
     case phoneNumber = "phone"
-    case eMail = "tray"
+    case email = "tray"
 }
