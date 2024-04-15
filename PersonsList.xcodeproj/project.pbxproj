@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,7 +14,7 @@
 		72B5BABE2490C8E6009533DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72B5BABC2490C8E6009533DD /* LaunchScreen.storyboard */; };
 		72B5BAC62490CB76009533DD /* PersonListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B5BAC52490CB76009533DD /* PersonListViewController.swift */; };
 		72B5BAC82490CD96009533DD /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B5BAC72490CD96009533DD /* Person.swift */; };
-		72B5BACA2490CF21009533DD /* DataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B5BAC92490CF21009533DD /* DataStorage.swift */; };
+		72B5BACA2490CF21009533DD /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B5BAC92490CF21009533DD /* DataStore.swift */; };
 		72B5BACC24910325009533DD /* PersonDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B5BACB24910325009533DD /* PersonDetailsViewController.swift */; };
 		72B5BACE24910376009533DD /* SecondPersonListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B5BACD24910376009533DD /* SecondPersonListViewController.swift */; };
 		72B5BAD024920B30009533DD /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B5BACF24920B30009533DD /* TabBarViewController.swift */; };
@@ -31,7 +31,7 @@
 		72B5BABF2490C8E6009533DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		72B5BAC52490CB76009533DD /* PersonListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonListViewController.swift; sourceTree = "<group>"; };
 		72B5BAC72490CD96009533DD /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
-		72B5BAC92490CF21009533DD /* DataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStorage.swift; sourceTree = "<group>"; };
+		72B5BAC92490CF21009533DD /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		72B5BACB24910325009533DD /* PersonDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailsViewController.swift; sourceTree = "<group>"; };
 		72B5BACD24910376009533DD /* SecondPersonListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondPersonListViewController.swift; sourceTree = "<group>"; };
 		72B5BACF24920B30009533DD /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
@@ -69,10 +69,10 @@
 			isa = PBXGroup;
 			children = (
 				8FC147A42A1FF638003BED20 /* App */,
+				8F69A37A2A20162800D096BF /* Services */,
 				8FC147A52A1FF64F003BED20 /* Models */,
 				8F47FA1D2A28F42C00A7F912 /* Views */,
 				72B5BAD124921E1E009533DD /* ViewControllers */,
-				8F69A37A2A20162800D096BF /* Services */,
 				8FC147A72A1FF687003BED20 /* Resources */,
 				8FC147A62A1FF670003BED20 /* Storyboards */,
 			);
@@ -84,8 +84,8 @@
 			children = (
 				72B5BACF24920B30009533DD /* TabBarViewController.swift */,
 				72B5BAC52490CB76009533DD /* PersonListViewController.swift */,
-				72B5BACD24910376009533DD /* SecondPersonListViewController.swift */,
 				72B5BACB24910325009533DD /* PersonDetailsViewController.swift */,
+				72B5BACD24910376009533DD /* SecondPersonListViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -101,7 +101,7 @@
 		8F69A37A2A20162800D096BF /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				72B5BAC92490CF21009533DD /* DataStorage.swift */,
+				72B5BAC92490CF21009533DD /* DataStore.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -167,8 +167,9 @@
 		72B5BAA62490C8E2009533DD /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1140;
-				LastUpgradeCheck = 1420;
+				LastUpgradeCheck = 1530;
 				ORGANIZATIONNAME = gordeyStudio;
 				TargetAttributes = {
 					72B5BAAD2490C8E2009533DD = {
@@ -215,7 +216,7 @@
 				72B5BAD024920B30009533DD /* TabBarViewController.swift in Sources */,
 				8F47FA1C2A28F41A00A7F912 /* HeaderTableViewCell.swift in Sources */,
 				72B5BAC62490CB76009533DD /* PersonListViewController.swift in Sources */,
-				72B5BACA2490CF21009533DD /* DataStorage.swift in Sources */,
+				72B5BACA2490CF21009533DD /* DataStore.swift in Sources */,
 				72B5BACC24910325009533DD /* PersonDetailsViewController.swift in Sources */,
 				72B5BAB22490C8E2009533DD /* AppDelegate.swift in Sources */,
 				72B5BAC82490CD96009533DD /* Person.swift in Sources */,
@@ -283,6 +284,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -344,6 +346,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

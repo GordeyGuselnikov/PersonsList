@@ -19,8 +19,8 @@ final class TabBarViewController: UITabBarController {
         guard let personListVC = viewControllers?.first as? PersonListViewController else { return }
         guard let secondPersonListVC = viewControllers?.last as? SecondPersonListViewController else { return }
         
-        let persons = Person.getPersons()
-        
+        let persons = Person.getPersons() // первичная инициализация данных (массива с контактами) тут!! в табБарКонтроллере
+        // и передаем эти данные в контроллеры
         personListVC.persons = persons
         secondPersonListVC.persons = persons
     }

@@ -27,11 +27,12 @@ extension Person {
     static func getPersons() -> [Person] {
         
         var persons: [Person] = []
+        let daraStore = DataStore.shared
         
-        let firstNames = DataStorage.shared.firstNames.shuffled()
-        let lastNames = DataStorage.shared.lastNames.shuffled()
-        let phoneNumbers = DataStorage.shared.phoneNumbers.shuffled()
-        let emails = DataStorage.shared.eMails.shuffled()
+        let firstNames = daraStore.firstNames.shuffled()
+        let lastNames = daraStore.lastNames.shuffled()
+        let phoneNumbers = daraStore.phoneNumbers.shuffled()
+        let emails = daraStore.eMails.shuffled()
         
         let iterationCount = min(
             firstNames.count,
@@ -40,7 +41,7 @@ extension Person {
             phoneNumbers.count
         )
         
-        for index in 0..<iterationCount {
+        for index in 0 ..< iterationCount {
             let person = Person(
                 firstName: firstNames[index],
                 lastName: lastNames[index],
